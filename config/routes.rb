@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/movies', to: 'movies#index'
+  get '/admin/movies', to: 'admin/movies#index'
+  get '/admin/movies/new', to: 'admin/movies#new'
+  get '/admin/movies/:id/edit', to: 'admin/movies#edit'
+  post '/admin/movies', to: 'admin/movies#create'
+  put '/admin/moves/:id', to: 'admin/movies#update'
+  delete '/admin/movies/:id', to: 'admin/movies#destroy'
 end

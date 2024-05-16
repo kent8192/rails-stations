@@ -1,0 +1,9 @@
+<%= form_for :movie, url: "/admin/moves/#{@movie.id}", method: :post do |f| %>
+  <%= f.text_field :name, :input_html => { :value  => @movie.name} %>
+  <%= f.number_field :year, :input_html => { :value  => @movie.year} %>
+  <%= f.text_area :description, :input_html => { :value  => @movie.description} %>
+  <%= f.url_field :image_url, :input_html => { :value  => @movie.image_url} %>
+  <%= f.check_box :is_showing, :input_html => { :value  => @movie.is_showing} %>
+  <%= f.submit "Submit" %>
+  <%= link_to '削除', movie_path(@movie), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+<% end %>

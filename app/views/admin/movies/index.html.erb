@@ -1,0 +1,10 @@
+<table>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><img src="<%= movie.image_url %>" alt="<%= movie.name %>のポスター"></td>
+      <td><%= movie.name %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.description %></td>
+    </tr>
+  <% end %>
+</table>
