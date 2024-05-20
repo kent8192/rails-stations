@@ -1,6 +1,7 @@
 FROM ruby:2.7.3
 RUN apt-get update -qq
 RUN apt-get install -y nodejs npm && npm install n -g && n 16
+RUN apt-get install -y libyaml-dev
 RUN npm install -g yarn
 RUN mkdir /app
 WORKDIR /app

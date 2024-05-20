@@ -11,7 +11,7 @@ module Admin
     def create
       @movie = Movie.new(movie_params)
       if @movie.save
-        redirect_to admin_movie_path(@movie), notice: '映画が正常に作成されました。'
+        redirect_to 'admin/movies', notice: '映画が正常に作成されました。'
       else
         flash.now[:alert] = '映画の作成に失敗しました。'
         render :new

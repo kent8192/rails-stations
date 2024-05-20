@@ -1,8 +1,13 @@
 <%= form_for :movie, url: '/admin/movies', method: :post do |f| %>
+  <%= f.label :name, "タイトル"  %>
   <%= f.text_field :name %>
+  <%= f.label :year, "公開年"  %>
   <%= f.number_field :year %>
+  <%= f.label :description, "説明"  %>
   <%= f.text_area :description %>
+  <%= f.label :image_url, "画像URL"  %>
   <%= f.url_field :image_url %>
+  <%= f.label :is_showing, "公開中/公開予定"  %>
   <%= f.check_box :is_showing %>
   <%= f.submit "Submit" %>
 <% end %>
