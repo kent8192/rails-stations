@@ -18,5 +18,6 @@
         "*.html.erb": "erb"
     },
     "editor.tabSize": 2,
-    "ruby.rubocop.executePath": "./"
+    "ruby.rubocop.executePath": "./",
+    "vscode-erb-beautify.executePath": "./htmlbeautifier",
 }
