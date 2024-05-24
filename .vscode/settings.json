@@ -17,5 +17,6 @@
     "files.associations": {
         "*.html.erb": "erb"
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "ruby.rubocop.executePath": "./"
 }
